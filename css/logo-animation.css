@@ -1,0 +1,262 @@
+
+
+.symbol {
+
+
+	float:left;
+
+
+}
+
+.text {
+
+	float:right;
+
+
+}
+
+
+
+#mask-circle {
+	display: inline-block;
+	-webkit-mask-image: url(mask.svg);
+
+}
+
+#outline-circle {
+	display: block;
+	height: 72px;
+	width: 72px;
+	border-radius: 50px; 
+	border: solid 2px rgb(95,121,138);
+	overflow:hidden;
+	position: relative;
+	margin: -2px;
+}
+
+#pencil {
+position: relative;
+transform:rotate(-57deg);
+-ms-transform:rotate(-57deg); /* IE 9 */
+-webkit-transform:rotate(-57deg); /* Safari and Chrome */
+width: 105px;
+bottom: 64px;
+right: 20px;
+transition: transform 2s;
+-webkit-transition: -webkit-transform 2s; /* Safari */s
+}
+
+
+
+#pencil:hover {
+transform: translate(300px,0);
+-webkit-transform: translate(300px,0);
+}
+
+#rectangle-fill {
+	margin:0;
+	width: 71px;
+	height: 44px;
+	background: rgb(95,121,138);
+	position: relative;
+	float:right;
+}
+#rectangle-highlight {
+	margin:0;
+	width: 68px;
+	height: 10px;
+	background: rgb(198,206,212);
+	position: relative;
+	float:right;
+	top: 2px;
+	left:-3px;
+}
+#triangle-outline {
+	margin:0;
+	width: 0;
+	height: 0;
+	border-top: 22px solid transparent;
+	border-right: 34px solid rgb(95,121,138);
+	border-bottom: 22px solid transparent;
+	position: relative;
+	float:left;
+
+}
+
+#triangle-fill {
+	margin:0;
+	width: 0;
+	height: 0;
+	border-top: 18px solid transparent;
+	border-right: 29px solid rgb(255,255,255);
+	border-bottom: 18px solid transparent;
+	position: relative;
+	top: -18px;
+	left: 3px;
+	float:left;
+
+}
+
+#triangle-small {
+	margin:0;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 16px solid rgb(95,121,138);
+	border-bottom: 10px solid transparent;
+	position: relative;
+	float:left;
+	top: -10px;
+	left: -1px;
+
+
+}
+
+
+#triangle-highlight {
+	margin:0;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-right: 12px solid rgb(198,206,212);
+	position: relative;
+	float:left;
+	bottom: 8px;
+	right: -2px;
+
+}
+
+#over-line {
+	background: rgb(255,255,255);
+	position: relative;
+	height: 10px;
+	widht:400px;
+	display: block;
+	-webkit-transform:rotate(57deg);
+	top: 70px;
+	right: 21px;
+}
+
+#greyline {
+	margin-top:50px;
+	background:rgb(198,206,212) ;
+	height: 2px;
+	width: 100%;
+
+}
+
+/* ANIMATION */
+
+#greyline.animate {
+	-webkit-animation-name: greyline;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;	
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 0;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes greyline {
+
+	0% {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 0;
+
+	}
+		68% {
+		opacity: 0;
+
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
+
+
+#pencil.animate {
+	-webkit-animation-name: pencil;
+	-webkit-animation-duration:4s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;	
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 0;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes pencil {
+
+	0% {
+		opacity: 0;
+		-webkit-transform:rotate(-57deg);
+
+	}
+
+	10% {
+		opacity: 0;
+
+	}
+		25% {
+		opacity: 1;
+		transform: translate(-300px,0);
+-webkit-transform: translate(-300px,0);
+
+
+
+	}
+	
+	100% {
+		transform: translate(0px,0);
+-webkit-transform: translate(0px,0);
+-webkit-transform:rotate(-57deg);
+
+	}
+
+}
+
+#outline-circle.animate {
+	-webkit-animation-name: circles;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;	
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 0;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes circles {
+
+0% {
+		opacity: 0;
+		transform: scale(0.5,0.5);
+		-webkit-transform: scale(0.5,0.5);
+
+
+
+	}
+
+	20% { 
+		opacity: 0;
+		transform: scale(0.5,0.5);
+		-webkit-transform: scale(0.5,0.5);
+	}
+	
+	45% { 
+		opacity: 1;
+		transform: scale(0,0);
+		-webkit-transform: scale(0,0);
+	}
+	
+
+	70% {
+		opacity: 100;
+		transform: none;
+		-webkit-transform: none;}
